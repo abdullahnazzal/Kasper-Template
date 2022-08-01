@@ -1,8 +1,9 @@
-/* Start Var */
+/* Start Variables */
 :root {
   --main-color: #19c8fa;
+  --saconder-color: #777;
 }
-/* End Var */
+/* End Variables */
 /* --------------------------------------------------- */
 /* Start Global Rules */
 
@@ -53,60 +54,54 @@ ul {
 /* --------------------------------------------------------------- */
 
 /* Start Componets */
-.section{
-    /* padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px; */
-}
-.section .main-section{
-    /* padding-left: 15px;
+.main-heading {
+  /* padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center; */
-    text-align: center;
+  text-align: center;
 }
-.section .main-section h2{
-    font-size: 40px;
-    font-weight: normal;
-    position: relative;
-    margin: 70px auto 70px;
-    text-transform: uppercase;
-}
-
-.section .main-section h2::before{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 120px;
-    background-color: #333;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* z-index: 1; */
+.main-heading h2 {
+  font-size: 40px;
+  font-weight: normal;
+  position: relative;
+  margin: 70px auto 70px;
+  text-transform: uppercase;
 }
 
-.section .main-section h2::after{
-    content: "";
-    /* background: black; */
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    border: 2px solid #333;
-    border-radius: 50%;
-    bottom: -38px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* top: 0; */
-    background-color: white;
-    /* z-index: 2; */
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 120px;
+  background-color: #333;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* z-index: 1; */
 }
 
-.section .main-section p{
-    margin: 0 auto 100px;
+.main-heading h2::after {
+  content: "";
+  /* background: black; */
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  border: 2px solid #333;
+  border-radius: 50%;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top: 0; */
+  background-color: white;
+  /* z-index: 2; */
+}
+
+.main-heading p {
+  margin: 0 auto 100px;
 }
 /* End Componets */
 
@@ -205,7 +200,7 @@ header .toggle-menu {
   .container nav ul {
     display: none;
   }
-  .toggle-menu{
+  .toggle-menu {
     padding-right: 15px;
   }
 }
@@ -307,10 +302,10 @@ header .toggle-menu {
 .landing .fa-angle-right {
   right: 10px;
 }
-@media (max-width: 767px){
-    .landing .change-background{
-        display: none;
-    } 
+@media (max-width: 767px) {
+  .landing .change-background {
+    display: none;
+  }
 }
 .landing .bullets {
   position: absolute;
@@ -331,9 +326,54 @@ header .toggle-menu {
 }
 
 .landing li.active {
-    width: 25px;
-    height: 25px;
-    border-color:var(--main-color);
-    background-color: var(--main-color);
+  width: 25px;
+  height: 25px;
+  border-color: var(--main-color);
+  background-color: var(--main-color);
 }
 /* End Landing  */
+
+/* Start Servers */
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 500px; */
+}
+@media (min-width: 767px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-column-gap: 70px; */
+    /* grid-row-gap:70px ; */
+    column-gap: 70px;
+    row-gap:70px ; 
+  }
+}
+.services-box {
+  max-width: 500px;
+  /* flex: 1; */
+  display: flex;
+}
+.services-box i {
+  padding-right: 20px;
+}
+/* .services-box .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.services-box .info h3 {
+  color: var(--main-color);
+  padding-bottom: 20px;
+}
+
+.services-box .info p {
+  color: var(--saconder-color);
+  padding-bottom: 20px;
+}
+
+/* Start Servers */
