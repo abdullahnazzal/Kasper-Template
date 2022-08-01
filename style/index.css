@@ -51,45 +51,47 @@ ul {
 
 /* Start Header */
 @media (max-width: 767px) {
-    .container nav ul {
-      display: none;
-    }
-    header .toggle-menu:hover + ul {
-      display: flex;
-      /* justify-content: center; */
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      /* right: 84px; */
-      width: 100%;
-      background-color: #0000005c;
-    }
-    header .toggle-menu:hover + ul::after {
-      content: "";
-      /* position: absolute;
+  .container nav ul {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .toggle-menu:hover + ul {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* right: 84px; */
+    width: 100%;
+    background-color: #0000005c;
+  }
+  header .toggle-menu:hover + ul::after {
+    content: "";
+    /* position: absolute;
       border: 15px solid;
       border-color: transparent transparent #00000095 transparent;
       top: -29px;
       right: 4px;
       z-index: 11; */
-    }
-    header ul li a {
-      padding: 10px !important;
-      transition: 0.5s;
-    }
-  
-    .container ul li {
-      transition: 00.5s;
-    }
   }
+  header ul li a {
+    padding: 10px !important;
+    transition: 0.5s;
+  }
+
+  .container ul li {
+    transition: 00.5s;
+  }
+}
 header {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    /* right: 0; */
-    z-index: 101;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* right: 0; */
+  z-index: 101;
 }
 header .container {
   display: flex;
@@ -126,22 +128,22 @@ header .toggle-menu {
   color: white;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 635px) {
   header .toggle-menu {
     display: none;
   }
-  /* .container nav ul  {
-    display: none;
-  } */
 }
 
 .container nav ul {
   display: flex;
 }
-@media(max-width: 767px){
-    .container nav ul  {
-        display: none;
-      }
+@media (max-width: 635px) {
+  .container nav ul {
+    display: none;
+  }
+  .toggle-menu{
+    padding-right: 15px;
+  }
 }
 .container nav ul li a {
   text-decoration: none;
@@ -177,3 +179,97 @@ header .toggle-menu {
   color: white;
 }
 /* End Header */
+/* ---------------------------------------------------------------------------------- */
+/* Start Landing  */
+
+.landing {
+  min-height: 100vh;
+  background-color: #1f2021;
+  background-image: url(../image/landing2.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgb(0 0 0 / 40%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.landing .txt {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  background-color: rgb(15 116 143 / 70%);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 30px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .landing .txt {
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.landing .content {
+  max-width: 500px;
+}
+.landing .content h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: start;
+}
+.landing .content p {
+  line-height: 1.8;
+}
+.landing .change-background {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.landing .fa-angle-left {
+  left: 10px;
+}
+.landing .fa-angle-right {
+  right: 10px;
+}
+@media (max-width: 767px){
+    .landing .change-background{
+        display: none;
+    } 
+}
+.landing .bullets {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .bullets li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.landing li.active {
+    width: 25px;
+    height: 25px;
+    border-color:var(--main-color);
+    background-color: var(--main-color);
+}
+/* End Landing  */
