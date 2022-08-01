@@ -170,7 +170,7 @@ header .container::after {
   bottom: 0px;
 }
 
-.container img {
+header .container img {
   height: 40px;
 }
 
@@ -435,7 +435,7 @@ header .toggle-menu {
     display: flex;
     flex-direction: column;
   }
-  .design .image img{
+  .design .image img {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -460,3 +460,90 @@ header .toggle-menu {
   /* background-image: ur; */
 }
 /* End Design */
+/* ------------------------ */
+
+/* Start Portfolio */
+.portfolio .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .container nav {
+  padding-bottom: 20px;
+}
+.portfolio .container nav ul li {
+  padding: 10px 20px;
+}
+.portfolio .container nav ul li.active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.portfolio .image-container {
+  /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.image-container .image-box {
+  flex-basis: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.image-container .image-box:hover .info {
+  bottom: 0;
+}
+.image-container .image-box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+@media (min-width: 375px) {
+  .image-container .image-box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .image-container .image-box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .image-container .image-box {
+    flex-basis: 33%;
+  }
+}
+.image-container .image-box img {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  transition: 0.5s;
+}
+.image-container .image-box .info {
+  position: absolute;
+  padding: 10px;
+  background-color: white;
+  left: 0;
+  bottom: -100px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.image-container .image-box .info h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.image-container .image-box .info p {
+  color: var(--main-color);
+}
+.portfolio .more {
+  color: white;
+  background-color: var(--main-color);
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+/* End Portfolio */
