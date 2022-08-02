@@ -784,17 +784,17 @@ header .toggle-menu {
 .skills-box {
   padding: 30px;
 }
-.skills-box h2{
+.skills-box h2 {
   padding-bottom: 20px;
 }
-.skills-box p{
+.skills-box p {
   /* padding-bottom: 30px; */
   color: var(--saconder-color);
 }
-.skill h2{
+.skill h2 {
   padding-top: 10px;
 }
-.skills-info-container{
+.skills-info-container {
   padding: 20px;
 }
 .skills-info-container .progress {
@@ -816,7 +816,7 @@ header .toggle-menu {
   background: black;
   position: absolute;
   right: -14px;
-    top: -28px;
+  top: -28px;
   border-radius: 3px;
   color: white;
   font-size: 13px;
@@ -834,7 +834,7 @@ header .toggle-menu {
     display: flex;
     flex-direction: column;
   }
-  .skills .person-info{
+  .skills .person-info {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -854,7 +854,7 @@ header .toggle-menu {
 /* ----------------------------- */
 
 /* Start Quote */
-.quote{
+.quote {
   position: relative;
   background-image: url(../image/quote.jpg);
   background-size: cover;
@@ -862,7 +862,7 @@ header .toggle-menu {
   margin-top: 100px;
   text-align: center;
 }
-.quote::before{
+.quote::before {
   content: "";
   position: absolute;
   top: 0;
@@ -880,8 +880,98 @@ header .toggle-menu {
   transform: translateX(-50%);
   left: 50%;
 }
-.quote .text h2{
+.quote .text h2 {
   font-weight: normal;
   margin-bottom: 20px;
 }
 /* End Quote */
+/* -------------------------- */
+/* Start Price */
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.price-container {
+  display: flex;
+  justify-content: center;
+}
+.price-container .price-box {
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #fcfcfc;
+  text-align: center;
+  flex-shrink: 0;
+}
+.price-box h2 {
+  font-weight: normal;
+  font-size: 30px;
+  border-top: 1px solid var(--main-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.price-box .current-price {
+  font-weight: 700;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.price-box .current-price::before {
+  content: "$";
+  position: absolute;
+  top: -7px;
+  left: 29px;
+  font-size: 20px;
+}
+.price-box .current-price::after {
+  content: "/Mo";
+  position: absolute;
+  bottom: -15px;
+  right: 11px;
+  font-size: 20px;
+}
+
+.price-box p {
+  border-top: 1px solid var(--main-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.price-box p:nth-last-child(2) {
+  border-bottom: 1px solid var(--main-color);
+}
+.price-box button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--main-color);
+  background-color: #fcfcfc;
+}
+@media (max-width: 768px) {
+  .price-container {
+    flex-wrap: wrap;
+  }
+  .price-container .price-box {
+    margin-bottom: 30px;
+  }
+}
+.price .price-contact {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+.price-contact h2 {
+  font-weight: normal;
+  padding: 20px;
+}
+.price-contact button {
+  border: none;
+  color: white;
+  background-color: var(--main-color);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+/* End Price */
