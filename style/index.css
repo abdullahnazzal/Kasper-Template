@@ -648,7 +648,7 @@ header .toggle-menu {
   position: relative;
 }
 @media (max-width: 768px) {
-  .statistics{
+  .statistics {
     height: 100vh;
   }
 }
@@ -686,7 +686,6 @@ header .toggle-menu {
     top: calc(55% - 12px);
     bottom: -244px;
     min-height: auto;
-    
   }
 }
 .statistics .stat-box {
@@ -724,3 +723,131 @@ header .toggle-menu {
   color: white;
 }
 /* End Statistics */
+
+/* ------------------------------------- */
+/* Start Skills */
+.skills {
+  display: flex;
+  text-align: center;
+}
+.test-box {
+  padding: 30px;
+  position: relative;
+}
+.test-box h2 {
+  padding-bottom: 20px;
+}
+.test-box p {
+  padding-bottom: 30px;
+}
+.skills .person-info {
+  display: flex;
+  padding: 20px;
+  position: relative;
+  text-align: start;
+}
+.skills .person-info img + p {
+  border-bottom: 1px solid gray;
+  color: var(--saconder-color);
+}
+.skills .person-info img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.skills .person-info .name {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.skills .bullet {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skills .bullet ul {
+  display: flex;
+}
+.skills .bullet ul li {
+  width: 15px;
+  height: 15px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.skills .bullet ul li.active {
+  background-color: #19c8fa;
+  border: var(--main-color);
+}
+.skills-box {
+  padding: 30px;
+}
+.skills-box h2{
+  padding-bottom: 20px;
+}
+.skills-box p{
+  /* padding-bottom: 30px; */
+  color: var(--saconder-color);
+}
+.skill h2{
+  padding-top: 10px;
+}
+.skills-info-container{
+  padding: 20px;
+}
+.skills-info-container .progress {
+  height: 30px;
+  background-color: gray;
+  /* z-index: 1; */
+}
+.skills-info-container .progress span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+  position: relative;
+  /* z-index: 234; */
+}
+.skills-info-container .progress span::before {
+  content: attr(data-progress);
+  width: 30px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  right: -14px;
+    top: -28px;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+}
+.skills-info-container .progress span::after {
+  content: "";
+  border: 10px solid;
+  border-color: black transparent transparent transparent;
+  position: absolute;
+  right: -7px;
+  top: -8px;
+}
+@media (max-width: 768px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills .person-info{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    align-items: center;
+  }
+  .skills .person-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+    /* margin-right: 30px; */
+  }
+}
+/* End Skills */
